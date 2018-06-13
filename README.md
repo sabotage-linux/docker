@@ -9,9 +9,10 @@ Prerequisite:
 * Unix shell
 
 ```sh
-git clone sabotage-linux/docker sabotage-docker
+git clone https://github.com/sabotage-linux/docker sabotage-docker
 cd sabotage-docker/builder
 
+./build.sh
 docker build -t my-sabotage .
 
 # once successfully built
