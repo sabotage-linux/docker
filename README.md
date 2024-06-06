@@ -1,6 +1,6 @@
 # sabotage-docker
 
-Docker images based on [Sabotage Linux](http://sabotage.tech/).
+Docker images based on [Sabotage Linux](https://sabotage-linux.github.io/)
 
 ## Build image
 
