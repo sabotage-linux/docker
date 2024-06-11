@@ -1,20 +1,19 @@
-# docker-sabotage
+# sabotage-docker
 
-A super small Docker image based on [Sabotage Linux](http://sabotage.tech/).
+Docker images based on [Sabotage Linux](https://sabotage-linux.github.io/)
 
-# How to build
+## Build image
 
-Prerequisite:
-* docker CE or similar
-* Unix shell
+Images' dependencies
 
-```sh
-git clone https://github.com/sabotage-linux/docker sabotage-docker
-cd sabotage-docker/builder
+	sabotage-stage1 based on chroot archive
+	sabotage-nginx-debug based on sabotage-stage1
+	sabotage-nginx based on sabotage-nginx-debug
+	sabotage-custom based on sabotage-stage1
 
-./build.sh
-docker build -t my-sabotage .
+Eventually use the stage1 archive from nethence (updated once in a while) to build all the images
 
-# once successfully built
-docker run -it my-sabotage
-```
+	git clone https://github.com/sabotage-linux/docker sabotage-docker
+	cd sabotage-docker/
+	./build-from-archive.sh
+
