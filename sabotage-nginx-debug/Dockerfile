@@ -3,8 +3,9 @@ FROM sabotage-stage1
 MAINTAINER pbraun@nethence.com
 
 RUN butch install bash
+RUN echo /bin/ash > /etc/shells
 RUN echo /bin/bash >> /etc/shells
-RUN echo alias ll=\'ls --color-auto -alh\' >> /root/.bashrc
+RUN echo alias ll=\'ls --color=auto -alh\' >> /root/.bashrc
 
 RUN butch install nginx
 RUN mkdir -p /var/www/html/
