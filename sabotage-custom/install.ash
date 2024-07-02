@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/ash
 
 butch install automake
 butch install autoconf
